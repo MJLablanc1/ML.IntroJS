@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang=en-us>
+<head>
+    <title>Something</title>
+<meta charset=utf-8>
+</head>
+<body>
+   <div>Part 1:<br>
+        a) The alert will be undefined, because var z is not defined as a string, number or other established type.<br>
+        b) The alert will be false becuase the operator ! is not, so the code would read not not false > not true > false.<br>
+        c) The operator % find the remainder of two divided numbers. In this case 7 divided by 2 will leave 1 in the remainder, the alert will say 1. <br>
+        d) The alert will say Jim Smith through concatenation. The var name is supplied Jim then is added to Smith making Jim Smith.<br>
+        e) The var myNum is supplied with the string 5, due to quotations. When the alert added 2 to myNume, it treated myNum as a string and concatenated the 2 make 52.<br>
+    <input type="button" value="Run Alerts" onclick="runAlerts()"><br>
+       Part 2:</div>
+    <ol>
+        <li>Two differences between Java and Javascript are that Javascript is used for browser interactivity, while Java is used in many applications. Java also must be compiled, while Javascript does not, its all-text.</li>
+        <li>The operator + simply adds the values of the right and left. With numbers, it will add the value of the numbers. With strings, it will concatenate the strings. While ++ adds 1 to the current value. Count = 1, count+1=2, but still count=1, count=count+1, count=2, count++, count=3 </li>
+        <li>Window.alert(), Console.Log(), and document.write() all have simular functions, which is display information, but they display it is different ways. Alert makes a popup that can be closed, Log makes a hidden note in the console, commoningly used for debugging. document.write writes directly to the page for the user to see.</li>
+        <li>= is used to set value and type, where == is used to test value, and === is used to test type and value.</li>
+        <li>A while loop checks for a certain condition before the start of the loop, where a do while loop checks at the end, running the loop at least once.</li>
+    </ol>
+    <div>Part 3:
+        <form>
+            <p>Enter your name please</p>
+            <input type=text id=firstName size="10">
+            <input type="button" value="Run loop" onclick="runLoop()">
+        </form>
+        <p id=writeHere></p>
+    </div>
+    <script>
+        function runLoop()
+        {
+            var fN =document.getElementById("firstName");
+            var wH =document.getElementById("writeHere");            
+            var c=0;
+            wH.innerHTML="";
+            do{               
+                wH.innerHTML=wH.innerHTML+'Welcome '+fN.value.toUpperCase()+"! <br><br>";            
+                c++;
+            }while(c<3);
+        }
+        
+        function runAlerts()
+        {
+         var z;  alert(typeof z);
+        //the alert will be undefined, because var z is not defined as a string, number or other established type.
+         alert(!!false);
+        //the alert will be false becuase the operator ! is not, so the code would read not not false > not true > false.
+         alert(7%2);
+        //The operator % find the remainder of two divided numbers. In this case 7 divided by 2 will leave 1 in the remainder, the alert will say 1.
+         var name="Jim"; alert(name+" Smith");
+        //The alert will say Jim Smith through concatenation. The var name is supplied Jim then is added to Smith making Jim Smith.
+         var myNum="5"; alert(myNum+2);
+        //The var myNum is supplied with the string 5, due to quotations. When the alert added 2 to myNume, it treated myNum as a string and concatenated the 2 make 52.
+        }
+    </script>
+</body>
+</html>
